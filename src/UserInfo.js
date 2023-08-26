@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Image, Text } from '@chakra-ui/react';
 import axios from 'axios';
-
+import { Spinner } from '@chakra-ui/react'
 const UserInfo = ({ username }) => {
   const [userData, setUserData] = useState(null);
 
@@ -19,7 +19,13 @@ const UserInfo = ({ username }) => {
   }, [username]);
 
   if (!userData) {
-    return <div>Loading...</div>;
+    return  <div style={{paddingLeft: "70px", marginTop:"20px", marginButtom:"20px"}}><Spinner
+    thickness='4px'
+    speed='0.65s'
+    emptyColor='gray.200'
+    color='blue.500'
+    size='xl'
+  /></div>;
   }
 
   return (

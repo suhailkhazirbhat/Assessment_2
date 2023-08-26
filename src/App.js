@@ -4,7 +4,7 @@ import UserForm from './UserForm';
 
 function App() {
   return (
-    <ChakraProvider>
+    <ChakraProvider   >
       <Container maxW="xl" centerContent mt="8">
         <Heading as="h1" size="xl" mb="4">
           GitHub User Card App
